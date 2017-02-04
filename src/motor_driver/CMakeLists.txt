@@ -119,11 +119,8 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(motor_control src/motor_control.cpp)
-add_executable(motor_driver src/motor_driver.cpp)
-## Specify libraries to link a library or executable target against
-target_link_libraries(motor_control ${catkin_LIBRARIES})
-target_link_libraries(motor_driver ${catkin_LIBRARIES})
+add_executable(motor_control src/motor_control.cpp motor_driver.cpp)
+target_link_libraries(motor_control ${catkin_LIBRARIES} wiringPi pthread)
 
 ## Declare a C++ library
 # add_library(motor_driver
