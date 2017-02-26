@@ -8,7 +8,7 @@
 #include <wiringPi.h>
 #include <softPwm.h>
 
-#define vel2pwm_rate 1200
+#define vel2pwm_rate 255
 
 
 void callback(const geometry_msgs::Twist& cmd_vel)
