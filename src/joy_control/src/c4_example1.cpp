@@ -20,7 +20,7 @@ TeleopJoy::TeleopJoy()
 {    
 	n.param("axis_linear",i_velLinear,i_velLinear);
 	n.param("axis_angular",i_velAngular,i_velAngular);
-	pub = n.advertise<geometry_msgs::Twist>("/turtle1/cmd_vel",1);
+	pub = n.advertise<geometry_msgs::Twist>("cmd_vel",1);
 	sub = n.subscribe<sensor_msgs::Joy>("joy", 10, &TeleopJoy::callBack, this);
 }
 
