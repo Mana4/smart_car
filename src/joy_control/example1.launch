@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <launch>
-	<node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+	<node pkg="motor_driver" type="motor_control" name="motor_control"/>
 	<node pkg="joy_control" type="c4_example1" name="c4_example1" />
 	<param name="axis_linear" value="1" type="int" />
 	<param name="axis_angular" value="0" type="int" />

@@ -10,7 +10,7 @@
 
 #define vel2pwm_rate 1200
 
-
+/*
 uint8 motorInit(void){
   
  
@@ -90,7 +90,7 @@ void motorTurnRight(void){
 	delay(100);
 }
            
-
+*/
 void callback(const geometry_msgs::Twist& cmd_vel)
 {
 	ROS_INFO("Received a /cmd_vel message!");
