@@ -34,7 +34,7 @@ void TeleopJoy::callBack(const sensor_msgs::Joy::ConstPtr& joy)
 
 int main(int argc, char** argv)
 {
-	ros::init(argc, argv, "teleopJoy");
-	TeleopJoy teleop_turtle;
+	ros::init(argc, argv, "c4_example1");
+	TeleopJoy c4_example1;
 	ros::spin();
 }
