@@ -29,7 +29,7 @@ void callback(const geometry_msgs::Twist& cmd_vel)
 		motorForward(cmd_vel.linear.x * vel2pwm_rate);
 	}
 	else if(cmd_vel.linear.x < 0){
-		motorBackward(cmd_vel.linear.x * vel2pwm_rate);
+		motorBackward(255);
 	}
 	else{
 		motorStop();
@@ -50,6 +50,7 @@ int main(int argc, char** argv)
 		ROS_INFO("setup wiringPi failed !");
 		return -1;
 	}
+	wiringPiSetupGpio (void) ;
 
 	ros::init(argc, argv, "motor_controller");
 	
