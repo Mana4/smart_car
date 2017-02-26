@@ -50,7 +50,7 @@ int main(int argc, char** argv)
 		ROS_INFO("setup wiringPi failed !");
 		return -1;
 	}
-	wiringPiSetupGpio (void) ;
+	wiringPiSetup (void) ;
 
 	ros::init(argc, argv, "motor_controller");
 	
